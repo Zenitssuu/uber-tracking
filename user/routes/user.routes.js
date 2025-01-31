@@ -4,8 +4,8 @@ const authmiddleware = require('../middleware/auth.middleware.js');
 const router = express.Router();
 
 router.post('/register', userController.register)
-router.post('/register', userController.login)
-router.post('/register', userController.logout)
+router.post('/login', userController.login)
+router.post('/logout', userController.logout)
 router.get('/profile', authmiddleware.userAuth ,userController.profile)
 
 module.exports = router;
